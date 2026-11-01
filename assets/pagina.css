@@ -89,7 +89,6 @@ h2{font:700 clamp(40px,11.6vw,74px)/.94 var(--f-sinal);max-width:16ch;text-wrap:
 .caso-texto{width:100%;border-top:2px solid var(--vinho);padding-top:12px}
 .caso h3{font:700 34px/1 var(--f-sinal)}
 .caso p{margin-top:8px}
-.caso .ligacao{display:inline-flex;align-items:center;min-height:44px;font-weight:600;color:var(--vinho);text-underline-offset:4px}
 
 .duvidas{border-top:2px solid var(--vinho)}
 .duvidas details{border-bottom:2px solid var(--vinho)}
