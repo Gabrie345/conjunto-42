@@ -134,6 +134,10 @@ h2{font:700 clamp(46px,13.4vw,92px)/.92 var(--f-sinal);letter-spacing:-.005em;ma
 .caso .video-fone{width:min(66vw,250px)}
 .video-fone .tela{aspect-ratio:390/844;background:#191C1B}
 .video-fone video{width:100%;height:100%;object-fit:cover}
+.tocar{position:absolute;inset:0;display:grid;place-items:center;width:100%;padding:0;border:0;background:rgba(25,28,27,.3);cursor:pointer}
+.tocar[hidden]{display:none}
+.tocar svg{width:76px;height:76px;padding:20px;border-radius:50%;background:var(--latao);fill:var(--tinta);box-shadow:0 8px 18px -8px rgba(0,0,0,.6)}
+.tocar:focus-visible{outline:3px solid var(--latao);outline-offset:-8px}
 .caso-texto{width:100%;border-top:2px solid var(--vinho);padding-top:12px}
 .caso h3{font:700 34px/1 var(--f-sinal)}
 .caso p{margin-top:8px}
@@ -611,15 +615,6 @@ footer{background:var(--vinho-fundo);color:#DCCFC6;padding:26px var(--margem) ca
   addEventListener('resize', () => atualiza(false));
   atualiza(false);
 
-  /* ---------- gravações dos trabalhos: só tocam na tela ---------- */
-  const gravacoes = [...document.querySelectorAll('.gravacao')];
-  const obsVideo = new IntersectionObserver(es => es.forEach(e => {
-    if (RM.matches) return;
-    if (e.isIntersecting) e.target.play().catch(() => {}); else e.target.pause();
-  }), { threshold: .25 });
-  gravacoes.forEach(v => obsVideo.observe(v));
-  RM.addEventListener('change', e => { if (e.matches) gravacoes.forEach(v => v.pause()); });
-
   /* ---------- mostrador do elevador e botão flutuante ---------- */
   const mostrador = $('mostrador');
   const obsAndar = new IntersectionObserver(es => es.forEach(e => {
@@ -637,5 +632,6 @@ footer{background:var(--vinho-fundo);color:#DCCFC6;padding:26px var(--margem) ca
   new IntersectionObserver(es => { noContato = es[0].isIntersecting; ajusta(); }).observe($('contato'));
 })();
 </script>
+<script src="assets/gravacoes.js"></script>
 </body>
 </html>
