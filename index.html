@@ -208,6 +208,11 @@ h2{font:700 clamp(46px,13.4vw,92px)/.92 var(--f-sinal);letter-spacing:-.005em;ma
 footer{background:var(--vinho-fundo);color:#DCCFC6;padding:26px var(--margem) calc(26px + env(safe-area-inset-bottom))}
 .rodape{max-width:1240px;margin:0 auto;display:grid;gap:7px;font-size:15.5px}
 .rodape b{font:700 24px/1 var(--f-sinal);color:var(--letra)}
+.rodape-nav{display:grid;gap:18px;margin-top:16px}
+.rodape-nav div{display:grid;justify-items:start}
+.rodape-nav strong{font-weight:600;color:var(--letra);margin-bottom:2px}
+.rodape-nav a{display:inline-flex;align-items:center;min-height:36px;text-underline-offset:3px}
+@media (min-width:640px){.rodape-nav{grid-template-columns:repeat(3,auto);justify-content:start;column-gap:64px}}
 
 .flutuante{position:fixed;right:var(--margem);bottom:max(14px,env(safe-area-inset-bottom));z-index:30;box-shadow:0 8px 18px -8px rgba(0,0,0,.6);visibility:hidden;opacity:0;transform:translateY(10px);transition:opacity .2s ease,transform .2s ease,visibility .2s}
 .flutuante.ver{visibility:visible;opacity:1;transform:none}
@@ -425,7 +430,7 @@ footer{background:var(--vinho-fundo);color:#DCCFC6;padding:26px var(--margem) ca
   <div class="andar-grade duvidas-grade">
     <h2 id="duvidas-t">Perguntas na portaria</h2>
     <div class="duvidas">
-      <details><summary>Você atende em Barueri e região?</summary><p>Sim. Atendo Barueri, Alphaville, Santana de Parnaíba, Osasco, Carapicuíba e Jandira. A conversa começa pelo WhatsApp.</p></details>
+      <details><summary>Você atende em Barueri e região?</summary><p>Sim. Atendo <a href="criacao-de-sites-barueri/">Barueri</a>, <a href="criacao-de-sites-alphaville/">Alphaville</a>, Santana de Parnaíba, <a href="criacao-de-sites-osasco/">Osasco</a>, Carapicuíba e Jandira. A conversa começa pelo WhatsApp.</p></details>
       <details><summary>Quanto custa?</summary><p>Depende do que você precisa. Depois de uma conversa, mando o valor por escrito.</p></details>
       <details><summary>Quanto tempo leva?</summary><p>Também depende do projeto. O prazo vem por escrito, antes de começar.</p></details>
       <details><summary>Não tenho logo nem domínio. Tem problema?</summary><p>Não. A gente resolve isso junto, e o domínio fica no seu nome.</p></details>
@@ -450,6 +455,7 @@ footer{background:var(--vinho-fundo);color:#DCCFC6;padding:26px var(--margem) ca
   <div class="rodape">
     <b>Conjunto 42</b>
     <span>Sites e apps em Barueri e região, para quem atende com hora marcada.</span>
+    <nav class="rodape-nav" aria-label="Páginas do site"><div><strong>Onde atendo</strong><a href="criacao-de-sites-barueri/">Barueri</a><a href="criacao-de-sites-alphaville/">Alphaville</a><a href="criacao-de-sites-osasco/">Osasco</a></div><div><strong>Para quem</strong><a href="site-para-dentista/">Dentistas</a><a href="site-para-advogado/">Advogados</a><a href="site-para-psicologo/">Psicólogos</a><a href="site-para-arquiteto/">Arquitetos</a></div><div><strong>Apps</strong><a href="criacao-de-aplicativos-barueri/">Criação de aplicativos</a></div></nav>
   </div>
 </footer>
 
