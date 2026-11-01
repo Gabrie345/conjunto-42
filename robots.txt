@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://gabrie345.github.io/conjunto-42/sitemap.xml
